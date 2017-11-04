@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Schedule</title>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.19.1/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <table id="sched" class="train">
+        <tr>
+            <th>Train</th>
+            <th>Destination</th>
+            <th>First Train Time</th>
+            <th>Frequency</th>
+            <th>Next Train Arrival</th>
+        </tr>
+    </table>
+    <form>
+        <div class="formGroup">
+            <label for="train-name">Train Name</label>
+            <input class="formControl" id="trainName" type="text">
+        </div>
+
+        <div class="formGroup">
+            <label for="train-dest">Destination</label>
+            <input class="formControl" id="trainDest" type="text">
+        </div>
+
+        <div class="formGroup">
+            <label for="train-time">First Train Time</label>
+            <input class="formControl" id="trainTime" type="time">
+        </div>
+
+        <div class="formGroup">
+            <label for="train-freq">Frequency</label>
+            <input class="formControl" id="trainFreq" type="time">
+        </div>
+
+        <button id="submit-train" type="submit">Submit</button>
+    </form>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script type="text/javascript" src="assets/app.js"></script>
+</body>
+
+</html>
