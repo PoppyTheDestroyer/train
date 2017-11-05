@@ -22,9 +22,21 @@ function addTrain() {
     $("#trainFreq").val("");
 
     database.ref().push({
-train: train,
-destination: destination,
-first: moment(first).format("hh:mm:ss"),
-freq: moment(freq).format("hh:mm:ss"),
+        train: train,
+        destination: destination,
+        first: moment(first).format("hh:mm:ss"),
+        freq: moment(freq).format("hh:mm:ss"),
     });
 }
+
+database.ref().on("value", function(snapshot) {
+    var data = snapshot.val();
+
+    console.log(data);
+
+$("#trainTableBody").empty();
+
+for(var key in data) {
+    
+}
+})
